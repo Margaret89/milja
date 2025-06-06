@@ -1,0 +1,76 @@
+// /*-------------- rating -----------------*/
+// .rating{
+// 	display: inline-block;
+// 	vertical-align: top;
+// 	width: 160px;
+// 	height: 21px;
+// 	background: url(../img/star-grey.png) repeat-x 0 0;
+// 	position: relative;
+// 	margin-left: -4px;
+
+// 	&__content{
+// 		width: 0;
+// 		height: 100%;
+// 		background: url(../img/star-color.png) repeat-x 0 0;
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 	}
+
+// 	&_small{
+// 		width: 95px;
+// 		height: 13px;
+// 		background-size: 20px 13px;
+// 		margin-left: -3px;
+// 	}
+
+// 	&_small &__content{background-size: 20px 13px;}
+// }
+
+// .rating-area{
+// 	display: inline-block;
+// 	vertical-align: top;
+// 	overflow: hidden;
+
+// 	input{display: none;}
+
+// 	&__item{
+// 		float: right;
+// 		cursor: pointer;
+// 	}
+
+// 	&__item:not(:last-child){margin-left: 5px;}
+
+// 	.icon{
+// 		fill: #d9d9d9;
+// 		transition: fill 0.2s ease 0s;
+// 	}
+
+// 	label:hover .icon,
+// 	label:hover ~label .icon,
+// 	input:checked ~ label .icon,
+// 	input:checked ~ label:hover .icon,
+// 	input:checked ~ label:hover ~ label .icon,
+// 	label:hover ~ input:checked ~ label .icon{
+// 		fill: var(--color-primary);
+// 	}
+// }
+
+// @media (max-width: 767px) {
+// 	.rating{
+// 		width: 120px;
+// 		height: 17px;
+// 		background-size: 24px 16px;
+// 		margin-left: -3px;
+
+// 		&__content{background-size: 24px 16px;}
+
+// 		&_small{
+// 			width: 60px;
+// 			height: 8px;
+// 			background-size: 12px 8px;
+// 		}
+	
+// 		&_small &__content{background-size: 12px 8px;}
+// 	}
+// }

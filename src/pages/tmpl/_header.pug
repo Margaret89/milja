@@ -1,0 +1,46 @@
+header.header
+	.container
+		.row
+			.col-12
+				.header__content
+					.header__logo
+						a(href="/")
+							img(src="/upload/logo.svg", alt="")
+
+					.header__menu
+						.ic-hamburger.js-btn-main-menu
+							span
+
+						ul.main-menu
+							-
+								var list=[
+									{text:'Тарифы', status:'active'},
+									{text:'О нас'},
+									{text:'Отзывы'},
+									{text:'Контакты'},
+								]
+							each item in list
+								li.main-menu__item(class=item.status?'active':'')
+									a(href="#")= item.text
+
+					.header-phone
+						.header-phone__btn
+							+svg('ic-call','ic-call', '20', '20')
+
+						.header-phone__content
+							.header-phone__label Звоните нам в любое время!
+
+							.header-phone__val
+								a(href="tel:+77771234567") +7 (777) 123 45 67
+
+					.social
+						a(href="#").social__item.social__item_tg
+							+svg('ic-telegram','ic-telegram', '20', '17')
+
+						a(href="#").social__item.social__item_wh
+							+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+						a(href="#").social__item.social__item_viber
+							+svg('ic-viber','ic-viber', '21', '23')
+
+					a(href="#").btn.btn_small Записаться

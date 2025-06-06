@@ -1,0 +1,15 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'main'
+
+block body
+	section.container
+		.row
+			.col-12
+				|Список всех страниц
+				if pages
+					ul
+						each page in pages
+							li
+								a(href=page.href, target='_blank')= page.title

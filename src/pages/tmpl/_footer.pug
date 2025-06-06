@@ -1,0 +1,82 @@
+footer.footer
+	.st-width
+		.footer__content
+			.container
+				.row
+					.col-12
+						.footer__top
+							.footer__info
+								.footer__logo
+									a(href="/")
+										img(src="/upload/logo-white.svg", alt="")
+
+								.ya-rating
+									.ya-rating__top
+										.ya-rating__icon
+											img(src="/upload/marker.svg", alt="")
+
+										.ya-rating__score 5.0
+										
+										.rating
+											.rating__content(style="width: 60%")
+
+									.ya-rating__label Рейтинг организации в Яндексе
+
+								.list-pay
+									.list-pay__item
+										img(src="/upload/mc.png", alt="")
+
+									.list-pay__item
+										img(src="/upload/visa.svg", alt="")
+
+									.list-pay__item
+										img(src="/upload/mir.svg", alt="")
+
+							ul.footer-menu
+								-
+									var list=[
+										{text:'Тарифы'},
+										{text:'О нас'},
+										{text:'Отзывы'},
+										{text:'Контакты'},
+									]
+								each item in list
+									li.footer-menu__item
+										a(href="#")= item.text
+
+							.footer-contacts
+								.footer-contacts__item
+									.footer-contacts__label Телефон
+
+									.footer-contacts__val
+										a.footer-contacts__phone(href="tel:+77771234567") +7 (777) 123 45 67
+
+								.footer-contacts__item
+									.footer-contacts__label Эл. почта
+
+									.footer-contacts__val
+										a.footer-contacts__mail(href="mailto:support@mile47.ru") support@mile47.ru
+
+								.footer-contacts__item
+									.footer-contacts__label Адрес
+
+									.footer-contacts__val
+										|Пушкин, Малая улица, 27/12
+										br
+										a(href="#") Узнать маршруты общественного транспорта
+
+						.footer__bottom
+							.footer__copyright © 2025 Автошкола «Миля». Все права защищены
+
+							.footer__polit
+								a(href="#") Политика конфиденциальности
+
+							.social
+								a(href="#").social__item.social__item_tg
+									+svg('ic-telegram','ic-telegram', '20', '17')
+
+								a(href="#").social__item.social__item_wh
+									+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+								a(href="#").social__item.social__item_viber
+									+svg('ic-viber','ic-viber', '21', '23')
