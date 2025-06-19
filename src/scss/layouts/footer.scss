@@ -1,0 +1,105 @@
+.footer{
+	margin-bottom: 20px;
+
+	&__content{
+		background: var(--bg-dark-blue);
+		border-radius: var(--border-radius);
+		color: #F4F4F4;
+		padding: 70px 0 30px;
+	}
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+	}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+		gap: 26px;
+	}
+
+	&__bottom{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		border-top: 1px solid #445063;
+		padding-top: 20px;
+		font-size: 1.6rem;
+		margin-top: 50px;
+	}
+
+	&__polit{
+		a{
+			color: #F4F4F4;
+			text-decoration: none;
+			transition: color 0.2s ease;
+
+			&:hover{color: var(--color-primary);}
+		}
+	}
+}
+
+.footer-menu{
+	&,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&{
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+
+	&__item{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+		color: #E6E6E6;
+
+		a{
+			color: #E6E6E6;
+			text-decoration: none;
+			transition: all 0.2s ease;
+
+			&:hover{color: var(--color-primary);}
+		}
+	}
+}
+
+.footer-contacts{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&__label{
+		font-size: 1.6rem;
+		line-height: 1.2;
+		color: #D3D3D3;
+		margin-bottom: 5px;
+	}
+
+	&__val{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+		color: #fff;
+	}
+
+	&__phone,
+	&__mail{
+		color: #fff;
+		text-decoration: none;
+		transition: color 0.2s ease;
+
+		&:hover{color: var(--color-primary);}
+	}
+
+	&__phone{font-size: 3rem;}
+	&__mail{font-size: 2rem;}
+}

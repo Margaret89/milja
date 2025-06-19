@@ -1,0 +1,27 @@
+/*-------------- ya-rating -----------------*/
+.ya-rating{
+	border: 1px solid #445063;
+	border-radius: 15px;
+	padding: 8px 9px;
+
+	&__top{
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__icon{flex-shrink: 0;}
+
+	&__score{
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1;
+		color: #fff;
+	}
+
+	&__label{
+		font-size: 1.4rem;
+		color: #fff;
+		margin-top: 3px;
+	}
+}

@@ -1,0 +1,36 @@
+/*-------------- main-menu -----------------*/
+.main-menu{
+	&,
+	&__item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&{
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__item{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--color-grey);
+
+		a{
+			color: var(--color-grey);
+			text-decoration: none;
+			transition: all 0.2s ease;
+
+			&:hover{color: var(--color-text);}
+		}
+
+		&.active,
+		&.active a,
+		a:active{
+			color: var(--color-primary);
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.header{
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+		padding: 26px 0;
+	}
+
+	&__logo{
+		margin-right: auto;
+
+		img{width: 199px;}
+	}
+
+	&__menu{
+		.ic-hamburger{display: none;}
+	}
+
+	&__action{
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+}
+
+.header-phone{
+	&__btn{display: none;}
+
+	&__label{
+		font-size: 1.3rem;
+		line-height: 1.2;
+	}
+
+	&__val{
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1.2;
+
+		a{
+			color: var(--color-text);
+			text-decoration: none;
+			transition: all 0.2s ease;
+
+			&:hover{color: var(--color-primary);}
+		}
+	}
+}
