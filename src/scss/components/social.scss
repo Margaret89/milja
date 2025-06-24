@@ -23,4 +23,13 @@
 	&__item_tg{background: #3390EC;}
 	&__item_wh{background: #25D366;}
 	&__item_viber{background: #7C509A;}
+
+	&_big{gap: 10px;}
+
+	&_big &__item{
+		width: 55px;
+		height: 55px;
+	}
+
+	&_dark &__item{background: var(--color-black);}
 }

@@ -1,0 +1,28 @@
+/*-------------- licenses -----------------*/
+.licenses-wrap{
+	&__content{
+		font-size: 2rem;
+		font-weight: 500;
+
+		h2, .h2{
+			text-align: left;
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.licenses-list{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 20px;
+
+	&__item{
+		max-width: calc(50% - 10px);
+		border: 2px solid #E6E6E6;
+		border-radius: 20px;
+		overflow: hidden;
+
+		a{cursor: zoom-in;}
+	}
+}

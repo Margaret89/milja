@@ -1,0 +1,51 @@
+/*-------------- cars-slider -----------------*/
+.cars-wrap{
+	&__top{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 20px;
+		margin-bottom: 40px;
+
+		h2, .h2{margin-bottom: 0;}
+	}
+}
+
+.cars-slider{
+	&__item{
+		background: var(--color-light-grey);
+		border-radius: 20px;
+		padding: 40px 30px;
+	}
+
+	&__label{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+	
+	&__title{
+		font-size: 4rem;
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	&__img{
+		padding-bottom: 63.7%;
+		position: relative;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__img-wrap{margin-top: 20px;}
+}

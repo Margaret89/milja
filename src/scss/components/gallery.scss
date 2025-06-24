@@ -1,0 +1,76 @@
+/*-------------- gallery -----------------*/
+.gallery-wrap{
+	&__btn{
+		margin-top: 50px;
+		text-align: center;
+	}
+}
+
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	&__item{
+		width: calc(25% - 15px);
+		border-radius: 16px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+	}
+
+	&__item:nth-child(6n+2),
+	&__item:nth-child(6n+4){
+		width: calc(41.66% - 13.33px);
+	}
+
+	&__item:nth-child(6n+3),
+	&__item:nth-child(6n+5){
+		width: calc(33.33% - 13.33px);
+	}
+
+	&__content{padding-bottom: 89.51%;}
+
+	&__item:nth-child(6n+2) &__content,
+	&__item:nth-child(6n+4) &__content{
+		padding-bottom: 52.51%;
+	}
+
+	&__item:nth-child(6n+3) &__content,
+	&__item:nth-child(6n+5) &__content{
+		padding-bottom: 66.08%;
+	}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		gap: 10px;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.4);
+		color: #fff;
+		padding: 25px;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		transition: top 0.2s ease;
+	}
+
+	&__title{
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	&__text{
+		font-size: 1.6rem;
+		line-height: 1.4;
+	}
+
+	&__item:hover &__info{top: 0;}
+}

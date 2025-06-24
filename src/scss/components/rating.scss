@@ -18,6 +18,28 @@
 	}
 }
 
+.rating-short{
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	height: 4.3rem;
+	border-radius: 10px;
+	border: 1px solid #C2C2C2;
+	padding: 0 10px;
+
+	&__score{
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&__star{
+		flex-shrink: 0;
+
+		.icon{color: var(--color-primary);}
+	}
+}
+
 // .rating-area{
 // 	display: inline-block;
 // 	vertical-align: top;

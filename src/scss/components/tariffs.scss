@@ -1,0 +1,68 @@
+/*-------------- tariffs -----------------*/
+.tariffs-wrap{
+	h2, .h2{margin-bottom: 2.8rem;}
+}
+
+.list-tariffs{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.tariff-item{
+	width: calc(33.33% - 13.33px);
+	background-color: var(--color-light-grey);
+	background-image: url(../img/half-car.png);
+	background-repeat: no-repeat;
+	background-position: 100% calc(100% - 40px);
+	border-radius: 20px;
+	padding: 40px 30px;
+
+	&__label{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+		text-transform: uppercase;
+		letter-spacing: 4%;
+	}
+
+	&__title{
+		font-size: 4rem;
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		letter-spacing: 3%;
+	}
+
+	&__title_small{font-size: 3rem;}
+
+	.btn{
+		width: 100%;
+		margin-top: 50px;
+	}
+}
+
+.tariff-params{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	&__label{
+		font-size: 1.6rem;
+		line-height: 1.2;
+		color: var(--color-grey);
+	}
+
+	&__val{
+		font-size: 1.6rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	&__price{
+		font-size: 3.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+}

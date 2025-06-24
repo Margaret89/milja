@@ -58,6 +58,55 @@ block body
 				br
 				br
 				a.btn.btn_small(href='#') Кнопка
+				br
+				br
+				a.btn.btn_black(href='#') Кнопка
+
+				br
+				br
+				br
+				.h2 Нестандартный checkbox
+				label.input-check
+					input(type='checkbox')
+					span.input-check__mark
+						+svg('ic-check','ic-check', '10', '8')
+					span.input-check__text Текст
+			
+				br
+				br
+				br
+				.h2 Табуляция
+				.tabs-page.js-tabs-page
+					.tabs-page__top
+						ul.tabs-page__list.js-tabs-page-list
+							li.tabs-page__item.js-tabs-page-item(data-item='tab-desc') Описание
+							li.tabs-page__item.js-tabs-page-item(data-item='tab-param') Характеристики
+							li.tabs-page__item.js-tabs-page-item(data-item='tab-spec') Спецификация
+							li.tabs-page__item.js-tabs-page-item(data-item='tab-use') Применение
+							li.tabs-page__item.js-tabs-page-item(data-item='tab-doc') Документация
+
+					.tabs-page__content.js-tabs-page-content
+						#tab-desc.tabs-page__content-item.js-tabs-page-content-item
+							.tabs-page__desc-item.js-tabs-page-desc-item
+								p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+
+								p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+
+						#tab-param.tabs-page__content-item.js-tabs-page-content-item
+							.tabs-page__desc-item.js-tabs-page-desc-item
+								| Текст
+
+						#tab-spec.tabs-page__content-item.js-tabs-page-content-item
+							.tabs-page__desc-item.js-tabs-page-desc-item
+								| Текст
+
+						#tab-use.tabs-page__content-item.js-tabs-page-content-item
+							.tabs-page__desc-item.js-tabs-page-desc-item
+								| Текст
+
+						#tab-doc.tabs-page__content-item.js-tabs-page-content-item
+							.tabs-page__desc-item.js-tabs-page-desc-item
+								| Текст
 
 				br
 				br
@@ -82,3 +131,43 @@ block body
 						.type-icon__img
 							+svg('ic-viber','ic-viber', '21', '23')
 						.type-icon__name ic-viber
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-glasses','ic-glasses', '31', '28')
+						.type-icon__name ic-glasses
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-car','ic-car', '24', '24')
+						.type-icon__name ic-car
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-ruble','ic-ruble', '20', '20')
+						.type-icon__name ic-ruble
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-clock','ic-clock', '24', '24')
+						.type-icon__name ic-clock
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+						.type-icon__name ic-arrow-left
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+						.type-icon__name ic-arrow-right
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-star','ic-star', '24', '23')
+						.type-icon__name ic-star
+
+					.type-icon__item
+						.type-icon__img
+							+svg('ic-check','ic-check', '10', '8')
+						.type-icon__name ic-check

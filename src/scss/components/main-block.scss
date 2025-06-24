@@ -1,0 +1,60 @@
+/*-------------- main-block -----------------*/
+.main-block{
+	height: 790px;
+	margin-bottom: 50px;
+
+	.st-width{
+		display: flex;
+		align-items: center;
+		height: 100%;
+		position: relative;
+	}
+
+	&__img{
+		width: 100%;
+		height: 100%;
+		border-radius: var(--border-radius);
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content{
+		color: #fff;
+		position: relative;
+
+		.btn{margin-top: 30px;}
+	}
+
+	&__title{
+		font-size: 6rem;
+		line-height: 1;
+		letter-spacing: -2%;
+
+		b{
+			font-size: 6.5rem;
+			letter-spacing: 0;
+		}
+	}
+
+	&__text{
+		max-width: 402px;
+		font-size: 2.4rem;
+		font-weight: 500;
+		line-height: 1.2;
+		margin-top: 30px;
+	}
+
+	.visually{
+		position: absolute;
+		right: 73px;
+		bottom: 20px;
+	}
+}

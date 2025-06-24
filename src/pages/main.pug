@@ -1,0 +1,544 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'main'
+
+block body
+	section.main-block
+		.st-width
+			.main-block__img
+				picture
+					source(srcset="/upload/bg-main-block-mobile.jpg" media='(max-width: 768px)')
+					img(src="/upload/bg-main-block.jpg" alt="")
+
+			.container
+				.row
+					.col-6
+						.main-block__content
+							.main-block__title
+								b Автошкола Миля — 
+								|права рядом с домом
+
+							.main-block__text Категории: A, B, BC, BD, C, а также квадроцикл, снегоход.
+
+							a(href="#").btn Записаться на курс
+
+			.visually
+				.visually__icon
+					+svg('ic-glasses','ic-glasses', '31', '28')
+
+				.visually__label Версия для слабовидящих
+
+	section.advatages-wrap.mb-indent
+		.st-width.bg-texture.r-border.p-indent
+			.container
+				.row
+					.col-12
+						h2 Наши преимущества
+				
+			.advatages-list
+				.container
+					.row
+						-
+							var list=[
+								{icon:'ic-car', icon_width:'24', icon_height:'24', title:'Опытные инструкторы', text:'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей'},
+								{icon:'ic-ruble', icon_width:'20', icon_height:'20', title:'Низкие цены', text:'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Удобное расписание', text:'Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Рассрочка без переплат', text:'Ты можешь оформить рассрочку на обучение без переплат от двух до шести месяцев.'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Филиалы в удобной части города', text:'Филиалы автошколы расположены по всему городу. Ты можешь обучаться в любой удобной для себя точке.'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Личный менеджер на связи 24/7', text:'Мы всегда на связи. Решим любой спорный вопрос в пользу курсанта.'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Автомат по цене механики', text:'Цена обучения на автомате и механике равны. Если в процессе обучения ты меняешь коробку передач, смена автомобиля происходит бесплатно.'},
+								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Дистанционное обучение', text:'Теорию можно изучать в удобном для тебя формате: видео-уроки в мобильном приложении, в группе с другими курсантами, тет-а-тет с преподавателем.'},
+							]
+						each item in list
+							.col-4
+								.advatage
+									.advatage__icon
+										+svg(item.icon, item.icon, item.icon_width, item.icon_height)
+
+									.advatage__title= item.title
+									.advatage__text= item.text
+
+	section.tariffs-wrap.m-indent
+		.container
+			.row
+				.col-12
+					h2 Курсы и цены
+			
+					.tabs-page.js-tabs-page
+						.tabs-page__top
+							ul.tabs-page__list.js-tabs-page-list
+								li.tabs-page__item.js-tabs-page-item(data-item='category-a') Категория А
+								li.tabs-page__item.js-tabs-page-item(data-item='category-b') Категория B
+								li.tabs-page__item.js-tabs-page-item(data-item='category-d') Категория D 
+							
+							a(href="#").btn.btn_black.btn_small Все тарифы
+
+						.tabs-page__content.js-tabs-page-content
+							#category-a.tabs-page__content-item.js-tabs-page-content-item
+								.tabs-page__desc-item.js-tabs-page-desc-item
+									.list-tariffs
+										-
+											var list=[
+												{label:'Тариф', title:'Стандарт', hours:'28 часов', price:'63 000'},
+												{label:'Тариф', title:'Профи', hours:'56 часов', price:'84 000'},
+												{title:'Дополнительные уроки', title_small:'true', hours:'5 часов', price:'10 000'},
+											]
+										each item in list
+											.tariff-item
+												if(item.label)
+													.tariff-item__label= item.label
+
+												.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+												.tariff-params
+													.tariff-params__item
+														.tariff-params__label Теория
+														.tariff-params__val Очно или Онлайн
+
+													.tariff-params__item
+														.tariff-params__label Практика
+														.tariff-params__val= item.hours
+
+													.tariff-params__item
+														.tariff-params__label Стоимость
+														.tariff-params__val
+															.tariff-params__price= item.price
+																| 
+																| &#8381;
+
+												a(href="#").btn.btn_small Записаться
+
+							#category-b.tabs-page__content-item.js-tabs-page-content-item
+								.tabs-page__desc-item.js-tabs-page-desc-item
+									.list-tariffs
+										-
+											var list=[
+												{label:'Тариф', title:'Стандарт', hours:'28 часов', price:'63 000'},
+												{label:'Тариф', title:'Профи', hours:'56 часов', price:'84 000'},
+											]
+										each item in list
+											.tariff-item
+												if(item.label)
+													.tariff-item__label= item.label
+
+												.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+												.tariff-params
+													.tariff-params__item
+														.tariff-params__label Теория
+														.tariff-params__val Очно или Онлайн
+
+													.tariff-params__item
+														.tariff-params__label Практика
+														.tariff-params__val= item.hours
+
+													.tariff-params__item
+														.tariff-params__label Стоимость
+														.tariff-params__val
+															.tariff-params__price= item.price
+																| 
+																| &#8381;
+
+												a(href="#").btn.btn_small Записаться
+
+							#category-d.tabs-page__content-item.js-tabs-page-content-item
+								.tabs-page__desc-item.js-tabs-page-desc-item
+									.list-tariffs
+										-
+											var list=[
+												{label:'Тариф', title:'Стандарт', hours:'28 часов', price:'63 000'},
+											]
+										each item in list
+											.tariff-item
+												if(item.label)
+													.tariff-item__label= item.label
+
+												.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+												.tariff-params
+													.tariff-params__item
+														.tariff-params__label Теория
+														.tariff-params__val Очно или Онлайн
+
+													.tariff-params__item
+														.tariff-params__label Практика
+														.tariff-params__val= item.hours
+
+													.tariff-params__item
+														.tariff-params__label Стоимость
+														.tariff-params__val
+															.tariff-params__price= item.price
+																| 
+																| &#8381;
+
+												a(href="#").btn.btn_small Записаться
+
+	section.gallery-wrap.m-indent
+		.st-width.bg-grey.r-border.p-indent
+			.container
+				.row
+					.col-12
+						h2 Галерея
+				
+						.gallery
+							-
+								var list=[
+									{img:'gallery1.jpg', title:'Заголовок', text:'Описание'},
+									{img:'gallery2.jpg', title:'Тренировочный полигон', text:'Лишь сделанные на базе интернет-аналитики выводы могут быть в равной степени предоставлены сами себе! А ещё акционеры крупнейших компаний обнародованы.'},
+									{img:'gallery3.jpg',  title:'Заголовок', text:'Описание'},
+									{img:'gallery4.jpg',  title:'Заголовок', text:'Описание'},
+									{img:'gallery5.jpg',  title:'Заголовок', text:'Описание'},
+									{img:'gallery6.jpg',  title:'Заголовок', text:'Описание'},
+								]
+							each item in list
+								.gallery__item(style="background-image: url(/upload/"+item.img+")")
+									.gallery__content
+										.gallery__info
+											.gallery__title= item.title
+											.gallery__text= item.text
+
+						.gallery-wrap__btn
+							a(href="#").btn Смотреть все
+
+	section.steps-wrap.m-indent
+		.container
+			.row
+				.col-6
+					.steps-wrap__content
+						h2 Как получить права
+						
+						.steps-wrap__text Cхема от А до Я
+
+						.steps-wrap__img
+							img(src="/upload/car-rights.jpg", alt="")
+
+				.col-6
+					.steps
+						-
+							var list=[
+								{num:'01', title:'Заявка на обучение', text:'С другой стороны, синтетическое тестирование однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия.'},
+								{num:'02', title:'Заключение договора', text:'С другой стороны, синтетическое тестирование однозначно определяет '},
+								{num:'03', title:'Начало изучения теории', text:'С другой стороны, синтетическое тестирование однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия. '},
+								{num:'04', title:'Вождение с инструктором', text:'С другой стороны, синтетическое тестирование однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия. '},
+								{num:'05', title:'Сдача экзаменов', text:'С другой стороны, синтетическое тестирование однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия. '},
+							]
+						each item in list
+							.steps__item
+								.steps__num= item.num
+
+								.steps__content
+									.steps__title= item.title
+									.steps__text= item.text
+	
+	section.form-wrap.mt-indent
+		.st-width.bg-texture.r-border.p-indent
+			.container
+				.row
+					.col-7
+						.form-wrap__content
+							form.form-site(action="/main.html")
+								.form-site__title Записывайтесь на курсы вождения автомобиля
+
+								.form-site__desc Представьтесь и оставьте свой номер, мы перезвоним!
+
+								.form-site__content
+									.form-site__item.js-form-site-item
+										label.form-site__field
+											input(name="name", type="text", required="required", placeholder=" ")
+
+											.form-site__label Ваше имя*
+									
+									.form-site__item.js-form-site-item
+										label.form-site__field
+											input(name="phone", type="text", class="js-phone", required="required", placeholder=" ")
+											.form-site__label Ваш телефон*
+
+								.form-site__polit
+									label.input-check
+										input(type='checkbox', required="required", checked="checked")
+										span.input-check__mark
+											+svg('ic-check','ic-check', '10', '8')
+										span.input-check__text Я согласен на обработку моих 
+											a(href="#") персональных данных
+
+								.form-site__btn
+									input(type="submit", value="Смотреть все").btn.btn_brown.js-btn-submit
+
+									.social.social_big
+										a(href="#").social__item.social__item_tg
+											+svg('ic-telegram','ic-telegram', '20', '17')
+
+										a(href="#").social__item.social__item_wh
+											+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+					.col-5
+						.form-wrap__img
+							img(src="/upload/learning-drive.jpg", alt="")
+					
+	section.branches-wrap.m-indent
+		.container
+			.row
+				.col-12
+					h2 Карта филиалов
+					
+		.branches
+			.container
+				.row
+					.col-8
+						.branches__map
+							#map.map
+							script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+			
+					.col-4
+						.branches-list
+							-
+								var list=[
+									{title:'Пушкин', address:'Малая улица, 27/12', latitude:'59.717400', longitude:'30.405502'},
+									{title:'Гатчина', address:'улица Урицкого, 12', latitude:'59.561230', longitude:'30.129450'},
+									{title:'Коммунар', address:'Ленинградская улица, 2А', latitude:'59.621609', longitude:'30.393483'},
+								]
+							each item in list
+								.branche-item.js-branche-item(data-lat=item.latitude, data-long=item.longitude, data-address=item.address)
+									.branche-item__top
+										.branche-item__title= item.title 
+
+										.social.social_dark
+											a(href="#").social__item.social__item_tg
+												+svg('ic-telegram','ic-telegram', '20', '17')
+
+											a(href="#").social__item.social__item_wh
+												+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+									.branche-params
+										.branche-params__item
+											.branche-params__label Телефон
+											.branche-params__val +7 (777) 123 45 67
+
+										.branche-params__item
+											.branche-params__label Адрес
+											.branche-params__val= item.address
+
+									.branche-item__link
+										a(href="#") Узнать маршруты общественного транспорта
+
+	section.instructors-wrap.m-indent
+		.st-width.bg-grey.r-border.p-indent
+			.container
+				.row
+					.col-12
+						.instructors-wrap__top
+							.swiper-button-prev.js-instructors-slider-prev
+								+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+
+							h2 Наши инструкторы
+
+							.swiper-button-next.js-instructors-slider-next
+								+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+				
+						.swiper.instructors-slider.js-instructors-slider
+							.swiper-wrapper
+								-
+									var list=[
+										{img:'instructor1.jpg', name:'Денис Зюбан'},
+										{img:'instructor2.jpg', name:'Олег Игнатов'},
+										{img:'instructor3.jpg', name:'Петр Самойлов'},
+										{img:'instructor4.jpg', name:'Лариса Паномарчук'},
+										{img:'instructor2.jpg', name:'Олег Игнатов'},
+										{img:'instructor3.jpg', name:'Петр Самойлов'},
+									]
+								each item in list
+									.swiper-slide.instructors-slider__item
+										.instructors-slider__img-wrap
+											.instructors-slider__img
+												img(src="/upload/"+item.img, alt="")
+
+										.instructors-slider__content
+											.instructors-slider__name= item.name
+										
+											.instructors-params
+												.instructors-params__item
+													.instructors-params__label Стаж работы:
+													.instructors-params__val 7 лет
+
+												.instructors-params__item
+													.instructors-params__label Отучил:
+													.instructors-params__val 670 учеников
+
+												.instructors-params__item
+													.instructors-params__label Сдача вождения:
+													.instructors-params__val 94%
+
+												.instructors-params__item
+													.instructors-params__label Рейтинг:
+													.instructors-params__val 91%
+								
+						.instructors-wrap__btn
+							a(href="#").btn Все инструкторы
+
+	section.cars-wrap.m-indent
+		.container
+			.row
+				.col-12
+					.cars-wrap__top
+						.swiper-button-prev.js-cars-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+
+						h2 Наш автопарк
+
+						.swiper-button-next.js-cars-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+			
+					.swiper.cars-slider.js-cars-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{img:'car1.png', label:'skoda', title:'octavia'},
+									{img:'car2.png', label:'BMW', title:'520i'},
+									{img:'car3.png', label:'skoda', title:'Superb'},
+									{img:'car2.png', label:'BMW', title:'520i'},
+									{img:'car3.png', label:'skoda', title:'Superb'},
+								]
+							each item in list
+								.swiper-slide.cars-slider__item
+									.cars-slider__label= item.label
+									.cars-slider__title= item.title
+
+									.cars-slider__img-wrap
+										.cars-slider__img
+											img(src="/upload/"+item.img, alt="")
+									
+	section.reviews-wrap.m-indent
+		.st-width.bg-grey.r-border.p-indent
+			.container
+				.row
+					.col-12
+						.reviews-wrap__top
+							.swiper-button-prev.js-reviews-slider-prev
+								+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+
+							h2 Отзывы
+
+							.swiper-button-next.js-reviews-slider-next
+								+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+				
+						.swiper.reviews-slider.js-reviews-slider
+							.swiper-wrapper
+								-
+									var list=[
+										{video:'https://www.youtube.com/watch?v=z2X2HaTvkl8', img:'preview-video1.jpg', ava:'ava1.jpg', name:'Иван Иванов', text:'Лишь сделанные на базе интернет-аналитики выводы могут быть в равной степени предоставлены сами себе! А ещё акционеры крупнейших компаний обнародованы.', content_img:'review.jpg'},
+										{video:'https://www.youtube.com/watch?v=UdaQRvVTIqU', img:'preview-video2.jpg', ava:'ava2.jpg', name:'Елизавета П.', text:'Не следует, однако, забывать, что внедрение современных методик позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет будут разоблачены.'},
+										{video:'https://www.youtube.com/watch?v=LXb3EKWsInQ', img:'preview-video3.jpg', ava:'ava3.jpg', name:'Геннадий Б.', text:'Внезапно, акционеры крупнейших компаний лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы. Равным образом, повышение уровня гражданского сознания требует анализа инновационных методов управления процессами.'},
+										{video:'https://www.youtube.com/watch?v=UdaQRvVTIqU', img:'preview-video2.jpg', ava:'ava2.jpg', name:'Елизавета П.', text:'Не следует, однако, забывать, что внедрение современных методик позволяет выполнить важные задания по разработке переосмысления внешнеэкономических политик. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели в сети интернет будут разоблачены.'},
+										{video:'https://www.youtube.com/watch?v=LXb3EKWsInQ', img:'preview-video3.jpg', ava:'ava3.jpg', name:'Геннадий Б.', text:'Внезапно, акционеры крупнейших компаний лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы. Равным образом, повышение уровня гражданского сознания требует анализа инновационных методов управления процессами.'},
+									]
+								each item in list
+									.swiper-slide.reviews-slider__item
+										a(href=item.video, data-fancybox).reviews-slider__img-wrap
+											.reviews-slider__img(style="background-image: url(/upload/"+item.img+")")
+											.reviews-slider__play
+												img(src="/img/play.svg", alt="")
+										
+										.reviews-slider__content
+											.reviews-slider__top
+												.reviews-slider__author
+													.reviews-slider__ava(style="background-image: url(/upload/"+item.ava+")")
+													
+													.reviews-slider__info
+														.reviews-slider__name= item.name
+														.reviews-slider__date 7 апреля 2025
+
+												.rating-short
+													.rating-short__score 5
+
+													.rating-short__star
+														+svg('ic-star','ic-star', '24', '23')
+
+											.reviews-slider__text= item.text
+
+												if(item.content_img)
+													img(src="/upload/"+item.content_img, alt="")
+								
+						.reviews-wrap__btn
+							a(href="#").btn Все отзывы
+
+	section.licenses-wrap.m-indent
+		.container
+			.row
+				.col-5
+					.licenses-wrap__content
+						h2 Лицензии
+						p У нашей автошколы есть лицензии. Задача организации, в особенности же граница обучения кадров создаёт предпосылки для поэтапного и последовательного развития.
+
+				.col-6.offset-1
+					.licenses-list
+						-
+							var list=[
+								{img:'license1.jpg', img_big:'license-big1.jpg'},
+								{img:'license2.jpg', img_big:'license-big2.jpg'},
+							]
+						each item in list
+							.licenses-list__item
+								a(href="#",  data-fancybox="licenses", data-src="/upload/"+item.img_big) 
+									img(src="/upload/"+item.img, alt="")
+
+	section.form-wrap.mt-indent
+		.st-width.bg-texture.r-border.p-indent
+			.container
+				.row
+					.col-7
+						.form-wrap__content
+							form.form-site(action="/main.html")
+								.form-site__title Записывайтесь на обучение
+
+								.form-site__desc Представьтесь и оставьте свой номер, мы перезвоним!
+
+								.form-site__content
+									.form-site__item.js-form-site-item
+										label.form-site__field
+											input(name="name", type="text", required="required", placeholder=" ")
+
+											.form-site__label Ваше имя*
+									
+									.form-site__item.js-form-site-item
+										label.form-site__field
+											input(name="phone", type="text", class="js-phone", required="required", placeholder=" ")
+											.form-site__label Ваш телефон*
+
+								.form-site__polit
+									label.input-check
+										input(type='checkbox', required="required", checked="checked")
+										span.input-check__mark
+											+svg('ic-check','ic-check', '10', '8')
+										span.input-check__text Я согласен на обработку моих 
+											a(href="#") персональных данных
+
+								.form-site__btn
+									input(type="submit", value="Смотреть все").btn.btn_brown.js-btn-submit
+
+									.social.social_big
+										a(href="#").social__item.social__item_tg
+											+svg('ic-telegram','ic-telegram', '20', '17')
+
+										a(href="#").social__item.social__item_wh
+											+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+					.col-5
+						.form-wrap__img
+							img(src="/upload/woman-driver.jpg", alt="")
+
+	section.about.mt-indent
+		.container
+			.row
+				.col-5
+					.about__img
+						img(src="/upload/about.jpg", alt="")
+
+				.col-7.align-self-center
+					.about__content
+						h2 Об автошколе
+						
+						p
+							b Задача организации, в особенности же граница обучения кадров создаёт предпосылки для поэтапного и последовательного развития.
+
+						p С другой стороны, синтетическое тестирование однозначно определяет каждого участника как способного принимать собственные решения касаемо форм воздействия. Однозначно, предприниматели в сети интернет, инициированные исключительно синтетически, функционально разнесены на независимые элементы. Наше дело не так однозначно, как может показаться: социально-экономическое развитие создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса первоочередных требований! Сложно сказать, почему независимые государства призывают нас к новым свершениям, которые, в свою очередь, должны быть ассоциативно распределены по отраслям.

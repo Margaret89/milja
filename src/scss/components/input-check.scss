@@ -1,0 +1,43 @@
+/*-------------- input-check -----------------*/
+.input-check{
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 1.6rem;
+	line-height: 1.2;
+	color: var(--color-text);
+	margin: 0;
+	position: relative;
+	cursor: pointer;
+
+	input[type=checkbox]{display: none;}
+
+	&__mark{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: top;
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		border: 1px solid var(--bg-dark-blue);
+		border-radius: 5px;
+		background: #6F747D;
+		position: relative;
+		transition: all 0.2s ease 0s;
+
+		.icon{
+			color: var(--bg-dark-blue);
+			opacity: 0;
+		}
+	}
+
+	&__text{margin-top: 2px;}
+
+	input[type=checkbox]:checked + &__mark{
+		border-color: var(--color-primary);
+		background: var(--color-primary);
+	}
+
+	input[type=checkbox]:checked + &__mark .icon{opacity: 1;}
+}

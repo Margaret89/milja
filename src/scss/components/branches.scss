@@ -1,0 +1,78 @@
+/*-------------- branches -----------------*/
+.branches{
+	&__map{
+		border-radius: var(--border-radius);
+		overflow: hidden;
+
+		.map{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.branches__map,
+.branches-list{
+	height: 512px;
+}
+
+.branches-list{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 20px;
+	border: 1px solid var(--color-light-grey);
+	padding: 15px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+}
+
+.branche-item{
+	border-radius: 15px;
+	background: var(--color-light-grey);
+	padding: 20px;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__title{
+		font-size: 2.4rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+
+	&__link{
+		max-width: 190px;
+		text-align: right;
+		margin: 10px 0 0 auto;
+		font-size: 1.4rem;
+	}
+
+	.social{gap: 10px;}
+
+	&:hover{background: #e1e1e1;}
+}
+
+.branche-params{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 15px;
+	font-size: 1.6rem;
+	line-height: 1.2;
+
+	&__item{
+		display: flex;
+		justify-content: space-between;
+		gap: 15px;
+	}
+
+	&__label{color: var(--color-grey);}
+	&__val{font-weight: 500;}
+}
