@@ -5,16 +5,21 @@
 		font-weight: 500;
 		line-height: 1.2;
 		color: var(--color-grey);
-		margin-top: 10px;
+		margin-bottom: 20px;
 	}
 
 	&__img{
-		margin-top: 52px;
+		margin-top: auto;
 
 		img{border-radius: var(--border-radius);}
 	}
 
 	&__content{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+
 		h2, .h2{
 			text-align: left;
 			margin-bottom: 1.5rem;
@@ -52,5 +57,21 @@
 		font-size: 2.4rem;
 		font-weight: 500;
 		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 991px) {
+	.steps-wrap{
+		.steps{margin-top: 30px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.steps-wrap{
+		&__text{font-size: 2rem;}
+	}
+
+	.steps{
+		&__title{font-size: 2rem;}
 	}
 }

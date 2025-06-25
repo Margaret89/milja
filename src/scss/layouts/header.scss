@@ -25,6 +25,8 @@
 }
 
 .header-phone{
+	flex-shrink: 0;
+
 	&__btn{display: none;}
 
 	&__label{
@@ -36,6 +38,7 @@
 		font-size: 2rem;
 		font-weight: 500;
 		line-height: 1.2;
+		white-space: nowrap;
 
 		a{
 			color: var(--color-text);
@@ -43,6 +46,127 @@
 			transition: all 0.2s ease;
 
 			&:hover{color: var(--color-primary);}
+		}
+	}
+}
+
+@media (max-width: 1339px) {
+	.header{
+		&__content{gap: 30px;}
+	}
+}
+
+@media (max-width: 991px) {
+	.header{
+		&__content{gap: 15px;}
+
+		&__logo{
+			margin-right: 15px;
+	
+			img{width: 170px;}
+		}
+
+		&__menu{
+			position: relative;
+			margin-right: auto;
+
+			.ic-hamburger{display: block;}
+
+			.main-menu{
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 30px;
+				min-width: 252px;
+				background: #fff;
+				border-radius: 20px;
+				padding: 50px;
+				transform: scaleY(0);
+				transform-origin: 0 0;
+				position: absolute;
+				top: calc(100% + 28px);
+				left: 0;
+				z-index: 1000;
+				transition: transform 0.3s ease;
+
+				&.active{transform: scaleY(1);}
+			}
+		}
+	}
+
+	.header-phone{
+		position: relative;
+
+		&__btn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: var(--color-black);
+			color: #fff;
+
+			&.active{background: var(--color-primary);}
+		}
+	
+		&__content{
+			min-width: 250px;
+			background: #fff;
+			border-radius: 20px;
+			padding: 30px;
+			transform: scaleY(0);
+			transform-origin: 0 0;
+			position: absolute;
+			top: calc(100% + 28px);
+			left: 0;
+			z-index: 1000;
+			transition: transform 0.3s ease;
+
+			&.active{transform: scaleY(1);}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.header{
+		&__content{gap: 10px;}
+
+		&__logo{
+			margin-right: 0px;
+	
+			img{width: 150px;}
+		}
+	}
+
+	.header-phone{
+		order: 5;
+
+		&__content{
+			left: auto;
+			right: 0;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.header{
+		&__logo{
+			img{width: 110px;}
+		}
+
+		.social{
+			&__item{
+				width: 34px;
+				height: 34px;
+			}
+		}
+	}
+
+	.header-phone{
+		&__btn{
+			width: 34px;
+			height: 34px;
 		}
 	}
 }

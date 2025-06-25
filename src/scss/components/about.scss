@@ -16,5 +16,33 @@
 			font-size: 2rem;
 			font-weight: 500;
 		}
+
+		p:last-child{margin-bottom: 0;}
+	}
+}
+
+@media (max-width: 1339px) {
+	.about{
+		&__content{
+			h2, .h2{margin-bottom: 2rem;}
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.about{
+		&__img{margin-bottom: 50px;}
+		&__content{padding-left: 0;}
+	}
+}
+
+@media (max-width: 767px) {
+	.about{
+		&__img{margin-bottom: 30px;}
+
+		&__content{
+			b{font-size: 1.8rem;}
+			h2, .h2{margin-bottom: 1.6rem;}
+		}
 	}
 }

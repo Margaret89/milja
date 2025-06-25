@@ -26,3 +26,24 @@
 		a{cursor: zoom-in;}
 	}
 }
+
+@media (max-width: 1339px) {
+	.licenses-wrap{
+		&__content{font-size: 1.8rem;}
+	}
+}
+
+@media (max-width: 991px) {
+	.licenses-wrap{
+		&__content{margin-bottom: 50px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.licenses-wrap{
+		&__content{
+			font-size: 1.6rem;
+			h2, .h2{margin-bottom: 2rem;}
+		}
+	}
+}

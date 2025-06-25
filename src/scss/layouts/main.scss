@@ -249,3 +249,65 @@ button.btn{
 .text-uppercase{text-transform: uppercase !important;}
 .text-bold {font-weight: 700 !important;}
 .text-color {color: var(--color-primary) !important;}
+
+@media (max-width: 1339px) {
+	h2, .h2{font-size: 5rem;}
+}
+
+@media (max-width: 991px) {
+	:root{
+		--margin-indent: 130px;
+	}
+
+	.container{
+		max-width: 100%!important;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	.st-width{width: 100%;}
+}
+
+@media (max-width: 767px) {
+	:root{
+		--margin-indent: 120px;
+		--padding-indent: 80px;
+	}
+
+	body{font-size: 1.4rem;}
+
+	h2, .h2{
+		font-size: 4rem;
+		margin-bottom: 3rem;
+	}
+
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		&_small{
+			font-size: 1.4rem;
+			padding: 0 10px;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	:root{
+		--margin-indent: 100px;
+		--padding-indent: 60px;
+	}
+
+	h2, .h2{
+		font-size: 3rem;
+	}
+
+	.container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

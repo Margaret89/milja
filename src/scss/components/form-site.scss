@@ -152,82 +152,52 @@
 	}
 }
 
+@media (max-width: 1339px) {
+	.form-site{
+		&__title{font-size: 4rem;}
+	}
+}
 
+@media (max-width: 991px) {
+	.form-wrap{
+		.p-indent{
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 
-// // @media (max-width: 1599px) {
-// // 	.form-site-wrap{
-// // 		&__content{
-// // 			h1, .h1{max-width: 500px;}
-// // 		}
-// // 	}
+		&__img{margin-bottom: 50px;}
+	}
 
-// // 	.success-alert{
-// // 		&__title{font-size: 2.5vw;}
-// // 	}
-// // }
+	.form-site{
+		&__content{max-width: none;}
+	}
+}
 
-// // @media (max-width: 991px) {
-// // 	.form-site-wrap{
-// // 		&__content{
-// // 			margin-bottom: 15px;
+@media (max-width: 767px) {
+	.form-wrap{
+		.p-indent{
+			padding-top: 20px;
+		}
 
-// // 			h1, .h1{max-width: none;}
+		&__img{margin-bottom: 30px;}
+	}
 
-// // 			&::before{
-// // 				margin-left: -65px;
-// // 				margin-right: -65px;
-// // 				height: 350px;
-// // 				bottom: -350px;
-// // 				left: auto;
-// // 				right: -72px;
-// // 				background-position: bottom right;
-// // 			}
-// // 		}
+	.form-site{
+		&__title{font-size: 3.6rem;}
+	}
+}
 
-// // 		.form-site{max-width: 430px;}
-// // 	}
-// // }
+@media (max-width: 479px) {
+	.form-wrap{
+		.p-indent{
+			padding-top: 10px;
+		}
 
-// // @media (max-width: 767px) {
-// // 	.form-site-wrap{
-// // 		&__content{
-// // 			h1, .h1{margin-bottom: 0.9rem;}
-// // 			&::before{display: none;}
-// // 		}
+		// &__img{margin-bottom: 30px;}
+	}
 
-// // 		.form-site{max-width: none;}
-// // 	}
-
-// // 	.form-site{
-// // 		&__label{font-size: 1.6rem;}
-
-// // 		input[type="text"],
-// // 		input[type="email"],
-// // 		input[type="number"],
-// // 		input[type="password"],
-// // 		input[type="time"],
-// // 		input[type="date"],
-// // 		textarea{
-// // 			font-size: 1.6rem;
-// // 		}
-
-// // 		input[type="text"],
-// // 		input[type="email"],
-// // 		input[type="number"],
-// // 		input[type="password"],
-// // 		input[type="time"],
-// // 		input[type="date"]{
-// // 			height: 5rem;
-// // 		}
-// // 	}
-
-// // 	.success-alert{
-// // 		&__title{font-size: 3.5vw;}
-// // 	}
-// // }
-
-// // @media (max-width: 430px) {
-// // 	.success-alert{
-// // 		&__title{font-size: 4.5vw;}
-// // 	}
-// // }
+	.form-site{
+		&__title{font-size: 2.7rem;}
+		&__desc{font-size: 1.8rem;}
+	}
+}

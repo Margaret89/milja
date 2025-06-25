@@ -76,3 +76,39 @@
 	&__label{color: var(--color-grey);}
 	&__val{font-weight: 500;}
 }
+
+@media (max-width: 991px) {
+	.branches{
+		&__map{margin-bottom: 20px;}
+	}
+
+	.branche-item{
+		&__link{max-width: none;}
+	}
+
+	.branches-list{height: 580px;}
+}
+
+@media (max-width: 767px) {
+	.branches{
+		&__map{
+			height: auto;
+			padding-bottom: 100%;
+			position: relative;
+		}
+
+		.map{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+@media (max-width: 479px) {
+	.branche-item{
+		padding: 20px 15px;
+		&__title{font-size: 2rem;}
+		&__link{max-width: 190px;}
+	}
+}

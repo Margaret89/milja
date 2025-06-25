@@ -33,3 +33,7 @@
 
 	&_dark &__item{background: var(--color-black);}
 }
+
+@media (max-width: 767px) {
+	.social{gap: 10px;}
+}

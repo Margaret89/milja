@@ -67,3 +67,19 @@
 	&.active span::before {transition: top 0.3s ease 0s, transform 0.3s ease 0.3s;}
 	&.active span::after {transition: bottom 0.3s ease 0s, transform 0.3s ease 0.3s;}
 }
+
+@media (max-width: 479px) {
+	.ic-hamburger{
+		width: 34px;
+		height: 34px;
+
+		span{
+			width: calc(100% - 14px);
+			top: 17px;
+			left: 7px;
+		}
+		
+		span::before {top: -6px;}
+		span::after {bottom: -6px;}
+	}
+}

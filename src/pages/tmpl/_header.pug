@@ -11,7 +11,7 @@ header.header
 						.ic-hamburger.js-btn-main-menu
 							span
 
-						ul.main-menu
+						ul.main-menu.js-main-menu
 							-
 								var list=[
 									{text:'Тарифы', status:'active'},
@@ -24,10 +24,10 @@ header.header
 									a(href="#")= item.text
 
 					.header-phone
-						.header-phone__btn
+						.header-phone__btn.js-header-phone-btn
 							+svg('ic-call','ic-call', '20', '20')
 
-						.header-phone__content
+						.header-phone__content.js-header-phone-content
 							.header-phone__label Звоните нам в любое время!
 
 							.header-phone__val
@@ -44,4 +44,4 @@ header.header
 							a(href="#").social__item.social__item_viber
 								+svg('ic-viber','ic-viber', '21', '23')
 
-						a(href="#").btn.btn_small Записаться
+						a(href="#").btn.btn_small.d-none.d-md-inline-flex Записаться

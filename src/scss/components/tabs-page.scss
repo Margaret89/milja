@@ -2,7 +2,6 @@
 .tabs-page{
 	&__top{
 		display: flex;
-		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: 20px;
@@ -55,96 +54,28 @@
 	}
 }
 
-// @media (max-width: 991px) {
-// 	.tabs-page{
-// 		&__top{display: flex;}
+@media (max-width: 767px) {
+	.tabs-page{
+		&__top{
+			gap: 10px;
+			margin-bottom: 30px;
+		}
 
-// 		&__list{
-// 			overflow: hidden;
-// 			margin-left: -1px;
-// 			margin-right: -1px;
-// 		}
+		&__item{
+			height: 4.3rem;
+			font-size: 1.4rem;
+			padding: 0 8px;
+		}
+	}
+}
 
-// 		&__arr{
-// 			display: inline-flex;
-// 			align-items: center;
-// 			justify-content: center;
-// 			flex-shrink: 0;
-// 			width: 52px;
-// 			border-bottom: 1px solid var(--color-second);
-// 			background: #F9FFF9;
-// 			transition: all 0.2s ease 0s;
-// 			position: relative;
-// 			z-index: 2;
-// 			cursor: pointer;
+@media (max-width: 479px) {
+	.tabs-page{
+		&__top{
+			flex-direction: column;
+			gap: 10px;
 
-// 			&:first-child{border-right: 1px solid var(--color-second);}
-// 			&:last-child{border-left: 1px solid var(--color-second);}
-
-// 			.icon{
-// 				color: #656874;
-// 				transition: color 0.2s ease 0s;
-// 			}
-
-// 			&:not(.disable):hover{
-// 				background: var(--color-second);
-// 				.icon{color: #fff;}
-// 			}
-
-// 			&.hide{display: none;}
-
-// 			&.disable{
-// 				opacity: 0.5;
-// 				cursor: auto;
-// 			}
-// 		}
-
-// 		&__item{
-// 			flex-shrink: 0;
-// 			width: 50%;
-// 		}
-// 	}
-// }
-
-// @media (min-width: 768px) {
-// 	.tabs-page{
-// 		&__item{
-// 			&.active{cursor: auto;}
-			
-// 			&:hover,
-// 			&.active{
-// 				background: var(--color-second);
-// 				color: #fff;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media (max-width: 767px) {
-// 	.tabs-page{
-// 		&__item{
-// 			width: 100%;
-// 			min-height: 6.4rem;
-// 			padding: 7px;
-// 		}
-
-// 		&__desc-item{
-// 			padding: 20px;
-	
-// 			h3, .h3{
-// 				font-size: 2rem;
-// 				line-height: 1.4;
-// 				margin-bottom: 1.5rem;
-// 			}
-
-// 			ul{margin-bottom: 1rem;}
-// 		}
-
-// 		&__btn{
-// 			gap: 10px;
-// 			margin-top: 20px;
-
-// 			.btn{width: 100%;}
-// 		}
-// 	}
-// }
+			.btn{width: 100%;}
+		}
+	}
+}

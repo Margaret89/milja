@@ -16,12 +16,10 @@
 	}
 }
 
-.instructors-slider{
-	&__item{
-		background: #E6E6E6;
-		border-radius: 20px;
-		padding: 20px;
-	}
+.instructors-item{
+	background: #E6E6E6;
+	border-radius: 20px;
+	padding: 20px;
 
 	&__img{
 		padding-bottom: 100%;
@@ -67,4 +65,19 @@
 
 	&__label{color: var(--color-grey);}
 	&__val{font-weight: 500;}
+}
+
+@media (max-width: 1339px) {
+	.instructors-params{
+		&__item{font-size: 1.4rem;}
+	}
+}
+
+@media (max-width: 479px) {
+	.instructors-slider.swiper{
+		margin-left: -10px;
+		margin-right: -10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }

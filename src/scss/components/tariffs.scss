@@ -66,3 +66,53 @@
 		line-height: 1.2;
 	}
 }
+
+@media (max-width: 1339px) {
+	.tariff-item{
+		padding: 40px 25px;
+		background-position: 100% calc(100% - 85px);
+
+		&__title{font-size: 3.5rem;}
+		&__title_small{font-size: 2.7rem;}
+	}
+
+	.tariff-params{
+		&__price{font-size: 3rem;}
+	}
+}
+
+@media (max-width: 991px) {
+	.tariff-item{width: calc(50% - 10px);}
+}
+
+@media (max-width: 767px) {
+	.tariff-item{
+		padding: 20px 15px;
+		background-size: 50%;
+		background-position: 100% calc(100% - 64px);
+
+		&__label{font-size: 1.4rem;}
+
+		&__title{
+			font-size: 3rem;
+			margin-bottom: 20px;
+		}
+
+		&__title_small{font-size: 1.8rem;}
+
+		.btn{margin-top: 30px;}
+	}
+
+	.tariff-params{
+		&__label,
+		&__val{
+			font-size: 1.4rem;
+		}
+
+		&__price{font-size: 2.4rem;}
+	}
+}
+
+@media (max-width: 479px) {
+	.tariff-item{width: 100%;}
+}

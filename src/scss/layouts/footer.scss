@@ -103,3 +103,39 @@
 	&__phone{font-size: 3rem;}
 	&__mail{font-size: 2rem;}
 }
+
+@media (max-width: 991px) {
+	.footer{
+		&__top{
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		&__bottom{
+			flex-direction: column;
+			gap: 16px;
+			text-align: center;
+		}
+	}
+
+	.footer-menu{min-width: 160px;}
+	.footer-contacts{margin-top: 28px;}
+}
+
+@media (max-width: 767px) {
+	.footer-menu{min-width: 108px;}
+}
+
+@media (max-width: 479px) {
+	.footer{
+		&__top{
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 45px;
+		}
+
+		&__bottom{font-size: 1.4rem;}
+	}
+
+	.footer-contacts{margin-top: 0;}
+}

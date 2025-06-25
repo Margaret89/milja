@@ -8,15 +8,15 @@ block body
 		.st-width
 			.main-block__img
 				picture
-					source(srcset="/upload/bg-main-block-mobile.jpg" media='(max-width: 768px)')
+					source(srcset="/upload/bg-main-block-mobile.jpg" media='(max-width: 991px)')
 					img(src="/upload/bg-main-block.jpg" alt="")
 
 			.container
 				.row
-					.col-6
+					.col-xxl-6
 						.main-block__content
 							.main-block__title
-								b Автошкола Миля — 
+								b Автошкола Миля&nbsp;— 
 								|права рядом с домом
 
 							.main-block__text Категории: A, B, BC, BD, C, а также квадроцикл, снегоход.
@@ -51,13 +51,14 @@ block body
 								{icon:'ic-clock', icon_width:'24', icon_height:'24', title:'Дистанционное обучение', text:'Теорию можно изучать в удобном для тебя формате: видео-уроки в мобильном приложении, в группе с другими курсантами, тет-а-тет с преподавателем.'},
 							]
 						each item in list
-							.col-4
+							.col-md-6.col-lg-4
 								.advatage
 									.advatage__icon
 										+svg(item.icon, item.icon, item.icon_width, item.icon_height)
 
-									.advatage__title= item.title
-									.advatage__text= item.text
+									.advatage__content
+										.advatage__title= item.title
+										.advatage__text= item.text
 
 	section.tariffs-wrap.m-indent
 		.container
@@ -204,16 +205,16 @@ block body
 	section.steps-wrap.m-indent
 		.container
 			.row
-				.col-6
+				.col-lg-5.col-xxl-6
 					.steps-wrap__content
 						h2 Как получить права
 						
 						.steps-wrap__text Cхема от А до Я
 
-						.steps-wrap__img
+						.steps-wrap__img.d-none.d-lg-block
 							img(src="/upload/car-rights.jpg", alt="")
 
-				.col-6
+				.offset-lg-1.offset-xxl-0.col-lg-6
 					.steps
 						-
 							var list=[
@@ -235,7 +236,7 @@ block body
 		.st-width.bg-texture.r-border.p-indent
 			.container
 				.row
-					.col-7
+					.col-lg-7.order-2.order-lg-1
 						.form-wrap__content
 							form.form-site(action="/main.html")
 								.form-site__title Записывайтесь на курсы вождения автомобиля
@@ -272,9 +273,11 @@ block body
 										a(href="#").social__item.social__item_wh
 											+svg('ic-whatsapp','ic-whatsapp', '20', '20')
 
-					.col-5
+					.col-lg-5.align-self-lg-center.order-1.order-lg-2
 						.form-wrap__img
-							img(src="/upload/learning-drive.jpg", alt="")
+							picture
+								source(srcset="/upload/learning-drive-mobile.jpg" media='(max-width: 991px)')
+								img(src="/upload/learning-drive.jpg", alt="")
 					
 	section.branches-wrap.m-indent
 		.container
@@ -285,12 +288,13 @@ block body
 		.branches
 			.container
 				.row
-					.col-8
-						.branches__map
-							#map.map
-							script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+					.col-lg-7.col-xl-8
+						.branches__map-wrap
+							.branches__map
+								#map.map
+								script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
 			
-					.col-4
+					.col-lg-5.col-xl-4
 						.branches-list
 							-
 								var list=[
@@ -348,13 +352,13 @@ block body
 										{img:'instructor3.jpg', name:'Петр Самойлов'},
 									]
 								each item in list
-									.swiper-slide.instructors-slider__item
-										.instructors-slider__img-wrap
-											.instructors-slider__img
+									.swiper-slide.instructors-item
+										.instructors-item__img-wrap
+											.instructors-item__img
 												img(src="/upload/"+item.img, alt="")
 
-										.instructors-slider__content
-											.instructors-slider__name= item.name
+										.instructors-item__content
+											.instructors-item__name= item.name
 										
 											.instructors-params
 												.instructors-params__item
@@ -400,12 +404,12 @@ block body
 									{img:'car3.png', label:'skoda', title:'Superb'},
 								]
 							each item in list
-								.swiper-slide.cars-slider__item
-									.cars-slider__label= item.label
-									.cars-slider__title= item.title
+								.swiper-slide.cars-item
+									.cars-item__label= item.label
+									.cars-item__title= item.title
 
-									.cars-slider__img-wrap
-										.cars-slider__img
+									.cars-item__img-wrap
+										.cars-item__img
 											img(src="/upload/"+item.img, alt="")
 									
 	section.reviews-wrap.m-indent
@@ -433,20 +437,20 @@ block body
 										{video:'https://www.youtube.com/watch?v=LXb3EKWsInQ', img:'preview-video3.jpg', ava:'ava3.jpg', name:'Геннадий Б.', text:'Внезапно, акционеры крупнейших компаний лишь добавляют фракционных разногласий и функционально разнесены на независимые элементы. Равным образом, повышение уровня гражданского сознания требует анализа инновационных методов управления процессами.'},
 									]
 								each item in list
-									.swiper-slide.reviews-slider__item
-										a(href=item.video, data-fancybox).reviews-slider__img-wrap
-											.reviews-slider__img(style="background-image: url(/upload/"+item.img+")")
-											.reviews-slider__play
+									.swiper-slide.reviews-item
+										a(href=item.video, data-fancybox).reviews-item__img-wrap
+											.reviews-item__img(style="background-image: url(/upload/"+item.img+")")
+											.reviews-item__play
 												img(src="/img/play.svg", alt="")
 										
-										.reviews-slider__content
-											.reviews-slider__top
-												.reviews-slider__author
-													.reviews-slider__ava(style="background-image: url(/upload/"+item.ava+")")
+										.reviews-item__content
+											.reviews-item__top
+												.reviews-item__author
+													.reviews-item__ava(style="background-image: url(/upload/"+item.ava+")")
 													
-													.reviews-slider__info
-														.reviews-slider__name= item.name
-														.reviews-slider__date 7 апреля 2025
+													.reviews-item__info
+														.reviews-item__name= item.name
+														.reviews-item__date 7 апреля 2025
 
 												.rating-short
 													.rating-short__score 5
@@ -454,7 +458,7 @@ block body
 													.rating-short__star
 														+svg('ic-star','ic-star', '24', '23')
 
-											.reviews-slider__text= item.text
+											.reviews-item__text= item.text
 
 												if(item.content_img)
 													img(src="/upload/"+item.content_img, alt="")
@@ -465,12 +469,12 @@ block body
 	section.licenses-wrap.m-indent
 		.container
 			.row
-				.col-5
+				.col-lg-5
 					.licenses-wrap__content
 						h2 Лицензии
 						p У нашей автошколы есть лицензии. Задача организации, в особенности же граница обучения кадров создаёт предпосылки для поэтапного и последовательного развития.
 
-				.col-6.offset-1
+				.col-lg-6.offset-lg-1
 					.licenses-list
 						-
 							var list=[
@@ -486,7 +490,7 @@ block body
 		.st-width.bg-texture.r-border.p-indent
 			.container
 				.row
-					.col-7
+					.col-lg-7.order-2.order-lg-1
 						.form-wrap__content
 							form.form-site(action="/main.html")
 								.form-site__title Записывайтесь на обучение
@@ -523,18 +527,22 @@ block body
 										a(href="#").social__item.social__item_wh
 											+svg('ic-whatsapp','ic-whatsapp', '20', '20')
 
-					.col-5
+					.col-lg-5.align-self-lg-center.order-1.order-lg-2
 						.form-wrap__img
-							img(src="/upload/woman-driver.jpg", alt="")
+							picture
+								source(srcset="/upload/woman-drive-mobile.jpg" media='(max-width: 991px)')
+								img(src="/upload/woman-drive.jpg", alt="")
 
 	section.about.mt-indent
 		.container
 			.row
-				.col-5
+				.col-lg-5
 					.about__img
-						img(src="/upload/about.jpg", alt="")
+						picture
+								source(srcset="/upload/about-mobile.jpg" media='(max-width: 991px)')
+								img(src="/upload/about.jpg", alt="")
 
-				.col-7.align-self-center
+				.col-lg-7.align-self-lg-center
 					.about__content
 						h2 Об автошколе
 						

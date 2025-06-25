@@ -11,12 +11,10 @@
 	}
 }
 
-.cars-slider{
-	&__item{
-		background: var(--color-light-grey);
-		border-radius: 20px;
-		padding: 40px 30px;
-	}
+.cars-item{
+	background: var(--color-light-grey);
+	border-radius: 20px;
+	padding: 40px 30px;
 
 	&__label{
 		font-size: 1.6rem;
@@ -48,4 +46,20 @@
 	}
 
 	&__img-wrap{margin-top: 20px;}
+}
+
+@media (max-width: 767px) {
+	.cars-item{
+		padding: 30px 15px;
+
+		&__label{font-size: 1.4rem;}
+		&__title{font-size: 3rem;}
+	}
+
+	.swiper.cars-slider{
+		margin-left: -10px;
+		margin-right: -10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }

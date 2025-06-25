@@ -16,3 +16,16 @@
 
 	&:hover{background: var(--color-primary-hover);}
 }
+
+@media (max-width: 991px) {
+	.visually{
+		&__label{font-size: 1.4rem;}
+	}
+}
+
+@media (max-width: 767px) {
+	.visually{
+		width: 94px;
+		&__label{font-size: 1.2rem;}
+	}
+}

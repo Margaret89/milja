@@ -45,3 +45,34 @@
 		margin-top: 7px;
 	}
 }
+
+@media (max-width: 767px) {
+	.advatages-list{
+		margin-bottom: -10px;
+	
+		.advatage{
+			height: calc(100% - 10px);
+			margin-bottom: 10px;
+		}
+	}
+
+	.advatage{
+		display: flex;
+		gap: 20px;
+		padding: 20px;
+
+		&__icon{
+			flex-shrink: 0;
+			width: 40px;
+			height: 40px;
+			margin: 0;
+		}
+
+		&__title{font-size: 1.8rem;}
+
+		&__text{
+			font-size: 1.4rem;
+			margin-top: 10px;
+		}
+	}
+}

@@ -262,68 +262,80 @@ if(document.querySelector('#map')){
 const certificateSlider = new Swiper('.js-instructors-slider',
 {
 	modules: [Navigation],
-	slidesPerView: 4,
+	slidesPerView: 1.5,
 	spaceBetween: 20,
 	loop:true,
 	navigation: {
 		nextEl: '.js-instructors-slider-next',
 		prevEl: '.js-instructors-slider-prev',
 	},
-	// breakpoints: {
-	// 	1630: {
-	// 		spaceBetween: 30,
-	// 		slidesPerView: 3,
-	// 	},
-	// 	768: {
-	// 		spaceBetween: 12,
-	// 		slidesPerView: 3,
-	// 	},
-	// },
+	breakpoints: {
+		992: {
+			slidesPerView: 4,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		479: {
+			slidesPerView: 2,
+		},
+	},
 });
 	
 // Слайдер автопарка
 const carsSlider = new Swiper('.js-cars-slider',
 {
 	modules: [Navigation],
-	slidesPerView: 3,
-	spaceBetween: 20,
+	slidesPerView: 1.5,
+	spaceBetween: 10,
 	loop:true,
 	navigation: {
 		nextEl: '.js-cars-slider-next',
 		prevEl: '.js-cars-slider-prev',
 	},
-	// breakpoints: {
-	// 	1630: {
-	// 		spaceBetween: 30,
-	// 		slidesPerView: 3,
-	// 	},
-	// 	768: {
-	// 		spaceBetween: 12,
-	// 		slidesPerView: 3,
-	// 	},
-	// },
+	breakpoints: {
+		992: {
+			spaceBetween: 20,
+			slidesPerView: 3,
+		},
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 2,
+		},
+		479: {
+			spaceBetween: 10,
+			slidesPerView: 2,
+		},
+	},
 });
 	
 // Слайдер отзывов
 const reviewsSlider = new Swiper('.js-reviews-slider',
 {
 	modules: [Navigation],
-	slidesPerView: 3,
+	slidesPerView: 2,
 	spaceBetween: 20,
 	loop:true,
 	navigation: {
 		nextEl: '.js-reviews-slider-next',
 		prevEl: '.js-reviews-slider-prev',
 	},
-	// breakpoints: {
-	// 	1630: {
-	// 		spaceBetween: 30,
-	// 		slidesPerView: 3,
-	// 	},
-	// 	768: {
-	// 		spaceBetween: 12,
-	// 		slidesPerView: 3,
-	// 	},
-	// },
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+		},
+	},
 });
 	
+// Закрыть/Открыть мобильное меню
+document.querySelector('.js-btn-main-menu').addEventListener('click', function(){
+	this.classList.toggle("active");
+	document.querySelector('.js-main-menu').classList.toggle("active");
+});
+
+// Закрыть/Открыть мобильное контакты в шапке
+document.querySelector('.js-header-phone-btn').addEventListener('click', function(){
+	this.classList.toggle("active");
+	document.querySelector('.js-header-phone-content').classList.toggle("active");
+});
+
