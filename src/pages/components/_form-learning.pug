@@ -1,0 +1,46 @@
+section.form-wrap.mt-indent
+	.st-width.bg-texture.r-border.p-indent
+		.container
+			.row
+				.col-lg-7.order-2.order-lg-1
+					.form-wrap__content
+						form.form-site(action="/main.html")
+							.form-site__title Записывайтесь на обучение
+
+							.form-site__desc Представьтесь и оставьте свой номер, мы перезвоним!
+
+							.form-site__content
+								.form-site__item.js-form-site-item
+									label.form-site__field
+										input(name="name", type="text", required="required", placeholder=" ")
+
+										.form-site__label Ваше имя*
+								
+								.form-site__item.js-form-site-item
+									label.form-site__field
+										input(name="phone", type="text", class="js-phone", required="required", placeholder=" ")
+										.form-site__label Ваш телефон*
+
+							.form-site__polit
+								label.input-check
+									input(type='checkbox', required="required", checked="checked")
+									span.input-check__mark
+										+svg('ic-check','ic-check', '10', '8')
+									span.input-check__text Я согласен на обработку моих 
+										a(href="#") персональных данных
+
+							.form-site__btn
+								input(type="submit", value="Смотреть все").btn.btn_brown.js-btn-submit
+
+								.social.social_big
+									a(href="#").social__item.social__item_tg
+										+svg('ic-telegram','ic-telegram', '20', '17')
+
+									a(href="#").social__item.social__item_wh
+										+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+				.col-lg-5.align-self-lg-center.order-1.order-lg-2
+					.form-wrap__img
+						picture
+							source(srcset="/upload/woman-drive-mobile.jpg" media='(max-width: 991px)')
+							img(src="/upload/woman-driver.jpg", alt="")

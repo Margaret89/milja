@@ -95,6 +95,7 @@
 		margin-top: 18px;
 
 		img{
+			display: block;
 			border-radius: 15px;
 			margin: 20px 0;
 
@@ -102,6 +103,20 @@
 		}
 	}
 }
+
+.reviews-list{
+	column-count: 3;
+	gap: 20px;
+
+	.reviews-item{
+		margin-bottom: 20px;
+		break-inside: avoid;
+
+		&__content{min-height: 0;}
+	}
+}
+
+.reviews-video{margin-bottom: 20px;}
 
 @media (min-width: 992px) {
 	.reviews-slider{
@@ -115,6 +130,8 @@
 		&__img-wrap{margin-bottom: 20px;}
 		&__content{padding: 30px 20px;}
 	}
+
+	.reviews-list{column-count: 2;}
 }
 
 @media (max-width: 767px) {
@@ -128,6 +145,8 @@
 		&__name{font-size: 1.8rem;}
 		&__date{font-size: 1.4rem;}
 	}
+
+	.reviews-list{column-count: 1;}
 }
 
 @media (max-width: 479px) {

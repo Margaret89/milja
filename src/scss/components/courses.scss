@@ -1,0 +1,17 @@
+/*-------------- courses -----------------*/
+.courses{
+	&__sect:not(:last-child){margin-bottom: 120px;}
+
+	&__title{
+		font-size: 5rem;
+		font-weight: bold;
+		line-height: 1;
+		margin-bottom: 4rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.courses{
+		&__sect:not(:last-child){margin-bottom: 80px;}
+	}
+}

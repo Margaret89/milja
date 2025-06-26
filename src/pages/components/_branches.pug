@@ -1,0 +1,46 @@
+section.branches-wrap.mb-indent
+	.container
+		.row
+			.col-12
+				h2 Карта филиалов
+				
+	.branches
+		.container
+			.row
+				.col-lg-7.col-xl-8
+					.branches__map-wrap
+						.branches__map
+							#map.map
+							script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+		
+				.col-lg-5.col-xl-4
+					.branches-list
+						-
+							var list=[
+								{title:'Пушкин', address:'Малая улица, 27/12', latitude:'59.717400', longitude:'30.405502'},
+								{title:'Гатчина', address:'улица Урицкого, 12', latitude:'59.561230', longitude:'30.129450'},
+								{title:'Коммунар', address:'Ленинградская улица, 2А', latitude:'59.621609', longitude:'30.393483'},
+							]
+						each item in list
+							.branche-item.js-branche-item(data-lat=item.latitude, data-long=item.longitude, data-address=item.address)
+								.branche-item__top
+									.branche-item__title= item.title 
+
+									.social.social_dark
+										a(href="#").social__item.social__item_tg
+											+svg('ic-telegram','ic-telegram', '20', '17')
+
+										a(href="#").social__item.social__item_wh
+											+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+								.branche-params
+									.branche-params__item
+										.branche-params__label Телефон
+										.branche-params__val +7 (777) 123 45 67
+
+									.branche-params__item
+										.branche-params__label Адрес
+										.branche-params__val= item.address
+
+								.branche-item__link
+									a(href="#") Узнать маршруты общественного транспорта

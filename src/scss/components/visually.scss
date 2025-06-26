@@ -15,6 +15,22 @@
 	transition: background-color 0.2s ease;
 
 	&:hover{background: var(--color-primary-hover);}
+
+	&.fixed{
+		position: fixed;
+		right: 130px;
+		bottom: 40px;
+		z-index: 1000;
+	}
+}
+
+@media (max-width: 1339px) {
+	.visually{
+		&.fixed{
+			right: 20px;
+			bottom: 20px;
+		}
+	}
 }
 
 @media (max-width: 991px) {

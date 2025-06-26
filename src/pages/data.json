@@ -4,6 +4,22 @@
 			"href": "main.html",
 			"title":"Главная"
 		},
+		"about":{
+			"href": "about.html",
+			"title":"О нас"
+		},
+		"courses":{
+			"href": "courses.html",
+			"title":"Курсы и цены"
+		},
+		"contacts":{
+			"href": "contacts.html",
+			"title":"Контакты"
+		},
+		"reviews":{
+			"href": "reviews.html",
+			"title":"Отзывы"
+		},
 		"tipografika":{
 			"href": "tipografika.html",
 			"title":"Типографика",

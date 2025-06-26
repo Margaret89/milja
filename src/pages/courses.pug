@@ -1,0 +1,163 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'courses'
+
+block body
+	section.page-top
+		.st-width.bg-texture
+			.container
+				.row
+					.col-12
+						.page-top__content
+							h1 Курсы и цены
+
+							.page-top__desc Программы подготовки водителей
+				
+	section.courses.mb-indent
+		.container
+			.row
+				.col-12
+					.courses__sect
+						.courses__title Категория А
+						
+						.list-tariffs
+							-
+								var list=[
+									{label:'Тариф', title:'Стандарт', hours:'28 часов', price:'24 000'},
+									{label:'Тариф', title:'Профи', hours:'56 часов', price:'48 000'},
+								]
+							each item in list
+								.tariff-item.tariff-item_bike
+									if(item.label)
+										.tariff-item__label= item.label
+
+									.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+									.tariff-params
+										.tariff-params__item
+											.tariff-params__label Теория
+											.tariff-params__val Очно или Онлайн
+
+										.tariff-params__item
+											.tariff-params__label Практика
+											.tariff-params__val= item.hours
+
+										.tariff-params__item
+											.tariff-params__label Стоимость
+											.tariff-params__val
+												.tariff-params__price= item.price
+													| 
+													| &#8381;
+
+									a(href="#").btn.btn_small Записаться
+					
+					.courses__sect
+						.courses__title Категория А+B
+						
+						.list-tariffs
+							-
+								var list=[
+									{label:'Тариф', title:'Комби', hours:'28 часов', price:'24 000'},
+								]
+							each item in list
+								.tariff-item.tariff-item_car-bike
+									if(item.label)
+										.tariff-item__label= item.label
+
+									.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+									.tariff-params
+										.tariff-params__item
+											.tariff-params__label Теория
+											.tariff-params__val Очно или Онлайн
+
+										.tariff-params__item
+											.tariff-params__label Практика
+											.tariff-params__val= item.hours
+
+										.tariff-params__item
+											.tariff-params__label Стоимость
+											.tariff-params__val
+												.tariff-params__price= item.price
+													| 
+													| &#8381;
+
+									a(href="#").btn.btn_small Записаться
+
+					.courses__sect
+						.courses__title Категория B
+						
+						.list-tariffs
+							-
+								var list=[
+									{label:'Тариф', title:'Стандарт', hours:'28 часов', price:'63 000'},
+									{label:'Тариф', title:'Профи', hours:'56 часов', price:'84 000'},
+									{title:'Дополнительные уроки', title_small:'true', hours:'5 часов', price:'10 000'},
+								]
+							each item in list
+								.tariff-item
+									if(item.label)
+										.tariff-item__label= item.label
+
+									.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+									.tariff-params
+										.tariff-params__item
+											.tariff-params__label Теория
+											.tariff-params__val Очно или Онлайн
+
+										.tariff-params__item
+											.tariff-params__label Практика
+											.tariff-params__val= item.hours
+
+										.tariff-params__item
+											.tariff-params__label Стоимость
+											.tariff-params__val
+												.tariff-params__price= item.price
+													| 
+													| &#8381;
+
+									a(href="#").btn.btn_small Записаться
+					
+					.courses__sect
+						.courses__title Восстановление навыков вождения
+						
+						.list-tariffs
+							-
+								var list=[
+									{label:'Тариф', title:'Восстановление навыков', title_small:'true', hours:'5 часов', price:'10 000'},
+									{label:'Тариф', title:'Восстановление навыков', title_small:'true', hours:'10 часов', price:'20 000'},
+								]
+							each item in list
+								.tariff-item
+									if(item.label)
+										.tariff-item__label= item.label
+
+									.tariff-item__title(class=item.title_small?'tariff-item__title_small':'')= item.title
+
+									.tariff-params
+										.tariff-params__item
+											.tariff-params__label Теория
+											.tariff-params__val Очно или Онлайн
+
+										.tariff-params__item
+											.tariff-params__label Практика
+											.tariff-params__val= item.hours
+
+										.tariff-params__item
+											.tariff-params__label Стоимость
+											.tariff-params__val
+												.tariff-params__price= item.price
+													| 
+													| &#8381;
+
+									a(href="#").btn.btn_small Записаться
+
+	include ./components/_form-learning
+
+	.visually.fixed
+		.visually__icon
+			+svg('ic-glasses','ic-glasses', '31', '28')
+
+		.visually__label Версия для слабовидящих

@@ -1,0 +1,52 @@
+extends tmpl/_layout
+
+block vars
+	- var pageId = 'contacts'
+
+block body
+	section.page-top
+		.st-width.bg-texture
+			.container
+				.row
+					.col-12
+						.page-top__content
+							h1 Контакты
+
+							.page-top__desc Адреса и контакты наших автошкол
+				
+	section.contacts
+		.container
+			.row
+				.col-md-5.col-lg-4
+					.contact-item
+						.contact-item__label Телефон головного офиса
+						.contact-item__val
+							a(href="tel:+77771234567") +7 (777) 123 45 67
+
+				.col-md-5.col-lg-4
+					.contact-item
+						.contact-item__label Электронная почта
+						.contact-item__val
+							a(href="mailto:support@mile47.ru") support@mile47.ru
+
+				.col-md-3.col-lg-4
+					.contact-item
+						.contact-item__label Мессенджеры
+						.contact-item__val
+							.social.social_big
+								a(href="#").social__item.social__item_tg
+									+svg('ic-telegram','ic-telegram', '20', '17')
+
+								a(href="#").social__item.social__item_wh
+									+svg('ic-whatsapp','ic-whatsapp', '20', '20')
+
+	
+	include ./components/_branches
+
+	include ./components/_form-learning
+
+	.visually.fixed
+		.visually__icon
+			+svg('ic-glasses','ic-glasses', '31', '28')
+
+		.visually__label Версия для слабовидящих

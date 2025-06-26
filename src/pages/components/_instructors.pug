@@ -1,0 +1,53 @@
+section.instructors-wrap.m-indent
+	.st-width.bg-grey.r-border.p-indent
+		.container
+			.row
+				.col-12
+					.instructors-wrap__top
+						.swiper-button-prev.js-instructors-slider-prev
+							+svg('ic-arrow-left','ic-arrow-left', '8', '14')
+
+						h2 Наши инструкторы
+
+						.swiper-button-next.js-instructors-slider-next
+							+svg('ic-arrow-right','ic-arrow-right', '8', '14')
+			
+					.swiper.instructors-slider.js-instructors-slider
+						.swiper-wrapper
+							-
+								var list=[
+									{img:'instructor1.jpg', name:'Денис Зюбан'},
+									{img:'instructor2.jpg', name:'Олег Игнатов'},
+									{img:'instructor3.jpg', name:'Петр Самойлов'},
+									{img:'instructor4.jpg', name:'Лариса Паномарчук'},
+									{img:'instructor2.jpg', name:'Олег Игнатов'},
+									{img:'instructor3.jpg', name:'Петр Самойлов'},
+								]
+							each item in list
+								.swiper-slide.instructors-item
+									.instructors-item__img-wrap
+										.instructors-item__img
+											img(src="/upload/"+item.img, alt="")
+
+									.instructors-item__content
+										.instructors-item__name= item.name
+									
+										.instructors-params
+											.instructors-params__item
+												.instructors-params__label Стаж работы:
+												.instructors-params__val 7 лет
+
+											.instructors-params__item
+												.instructors-params__label Отучил:
+												.instructors-params__val 670 учеников
+
+											.instructors-params__item
+												.instructors-params__label Сдача вождения:
+												.instructors-params__val 94%
+
+											.instructors-params__item
+												.instructors-params__label Рейтинг:
+												.instructors-params__val 91%
+							
+					.instructors-wrap__btn
+						a(href="#").btn Все инструкторы
