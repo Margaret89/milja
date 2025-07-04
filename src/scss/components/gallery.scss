@@ -135,3 +135,23 @@
 		&__btn{margin-top: 40px;}
 	}
 }
+
+@media (max-width: 479px) {
+	.gallery{
+		&__item,
+		&__item:nth-child(6n+1),
+		&__item:nth-child(6n+6),
+		&__item:nth-child(6n+2),
+		&__item:nth-child(6n+5){
+			width: 100%;
+		}
+		
+		&__content,
+		&__item:nth-child(6n+1) &__content,
+		&__item:nth-child(6n+6) &__content,
+		&__item:nth-child(6n+2) &__content,
+		&__item:nth-child(6n+5) &__content{
+			padding-bottom: 65.3%;
+		}
+	}
+}

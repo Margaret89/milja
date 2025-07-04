@@ -152,6 +152,17 @@
 	}
 }
 
+.popup-form{
+	.form-site{
+		&__title{
+			font-size: 4rem;
+			text-align: center;
+		}
+		
+		&__btn{justify-content: center;}
+	}
+}
+
 @media (max-width: 1339px) {
 	.form-site{
 		&__title{font-size: 4rem;}
@@ -184,6 +195,12 @@
 
 	.form-site{
 		&__title{font-size: 3.6rem;}
+	}
+
+	.popup-form{
+		.form-site{
+			&__title{font-size: 3.5rem;}
+		}
 	}
 }
 

@@ -80,7 +80,36 @@ footer.footer
 
 								a(href="#").social__item.social__item_viber
 									+svg('ic-viber','ic-viber', '21', '23')
+#callback(style='display: none;')
+		.popup-form
+			.js-valid-form
+				form.form-site(action="/main.html")
+					.form-site__title Записаться
 
+					.form-site__content
+						.form-site__item.js-form-site-item
+							label.form-site__field
+								input(name="name", type="text", required="required", placeholder=" ")
+
+								.form-site__label Ваше имя*
+						
+						.form-site__item.js-form-site-item
+							label.form-site__field
+								input(name="phone", type="text", class="js-phone", required="required", placeholder=" ")
+								.form-site__label Ваш телефон*
+
+					.form-site__polit
+						label.input-check
+							input(type='checkbox', required="required", checked="checked")
+							span.input-check__mark
+								+svg('ic-check','ic-check', '10', '8')
+							span.input-check__text Я согласен на обработку моих 
+								a(href="#") персональных данных
+
+					.form-site__btn
+						input(type="submit", value="Отправить").btn.btn_brown.js-btn-submit
+
+					
 #msg-success(style='display: none;')
 	.success-alert.js-success-alert
 		.success-alert__title.js-success-alert-title Ваше сообщение отправлено!

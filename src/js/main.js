@@ -26,6 +26,9 @@ Fancybox.bind("[data-fancybox]", {
 	}
 });
 
+//Ymaps
+import ymaps from 'ymaps';
+
 // Маска для телефона
 document.addEventListener("DOMContentLoaded", function(){
 	if(document.querySelector('.js-phone')){
@@ -202,16 +205,20 @@ async function sendForm(url, data, functionSuccess){
 
 // Yandex карта
 if(document.querySelector('#map')){
-	// Иницилизация карты
-	ymaps.ready(init);
+
+	ymaps
+  .load()
+  .then(maps => {
 	var myMap;
+	// Иницилизация карты
+	init();
 
 	function init(){
 		
 		let latitudeCenter = document.querySelector('.js-branche-item').getAttribute('data-lat');
 		let longitudeCenter = document.querySelector('.js-branche-item').getAttribute('data-long');
 		
-		myMap = new ymaps.Map("map", {
+		myMap = new maps.Map("map", {
 			center: [latitudeCenter, longitudeCenter],
 			zoom: 14,
 			controls: [],
@@ -227,7 +234,7 @@ if(document.querySelector('#map')){
 		});
 
 		function placemark(lat, long, text) {
-			var myPlacemark = new ymaps.Placemark([lat, long] , 
+			var myPlacemark = new maps.Placemark([lat, long] , 
 				{
 					balloonContentBody: text,
 					hintContent: text
@@ -241,21 +248,28 @@ if(document.querySelector('#map')){
 	
 			myMap.geoObjects.add(myPlacemark);
 		}
+
+		document.querySelectorAll('.js-branche-item').forEach(function(elem){
+			elem.addEventListener('click', function(){
+				let latitude = Number(elem.getAttribute('data-lat'));
+				let longitude = Number(elem.getAttribute('data-long'));
+	
+				myMap.panTo(
+					// Координаты нового центра карты
+					[latitude, longitude], {
+						flying: true
+					}
+				)
+			})
+		});
 	}
+  })
+  .catch(error => console.log('Failed to load Yandex Maps', error));
+	
+	
+	
 
-	document.querySelectorAll('.js-branche-item').forEach(function(elem){
-		elem.addEventListener('click', function(){
-			let latitude = Number(elem.getAttribute('data-lat'));
-			let longitude = Number(elem.getAttribute('data-long'));
-
-			myMap.panTo(
-				// Координаты нового центра карты
-				[latitude, longitude], {
-					flying: true
-				}
-			)
-		})
-	});
+	
 }
 
 // Слайдер инструкторов

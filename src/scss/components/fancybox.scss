@@ -1,0 +1,16 @@
+/*-------------- fancybox -----------------*/
+.fancybox__container .f-html{
+	border-radius: var(--border-radius);
+	background: url(../img/texture.jpg) repeat 0 0;
+	color: #fff;
+
+	h1,.h1,
+	h2,.h2,
+	h3,.h3,
+	h4,.h4,
+	h5,.h5{
+		color: #fff;
+	}
+
+	.input-check{color: #fff;}
+}

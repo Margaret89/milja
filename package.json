@@ -23,6 +23,7 @@
     "@fancyapps/ui": "^6.0.5",
     "bootstrap": "^5.3.6",
     "inputmask": "^5.0.9",
-    "swiper": "^11.2.8"
+    "swiper": "^11.2.8",
+    "ymaps": "^0.2.1"
   }
 }
